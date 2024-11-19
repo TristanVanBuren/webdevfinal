@@ -6,6 +6,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<header>
+        <nav>
+            
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+        </nav>
+    </header>
+
+
+
+
+
     <!-- Hero Section -->
     <div class="hero-section">
         <h1 class="hero-title">High top Mountain farm management sowftware</h1>
@@ -13,9 +28,9 @@
     
         
     <!-- Search moved to hero section -->
-    <div class="hero-search">
-        <h2>farming is hard and we are here to make it simple for you please make a selection below to start</h2>
-    </div>
+        <div class="hero-search">
+            <h2>farming is hard and we are here to make it simple for you please make a selection below to start</h2>
+        </div>
     </div>
 
 <!--going to put nav flex box here-->
