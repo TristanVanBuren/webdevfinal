@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #3de4379a;
     color: #333;
     max-width: 1200px;
     margin: 0 auto;
@@ -108,11 +108,12 @@ h1, h2 {
 }
 
 .hero-section {
-    background-color: #fff;
+    background-image: url("farm.jpg");
+    background-size: cover;
     padding: 40px 20px;
     margin: -20px -20px 40px -20px; /* Negative margin to stretch full width */
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #000000;
 }
 
 .hero-title {
@@ -132,7 +133,7 @@ h1, h2 {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(249, 249, 249, 0.8);  /* Using rgba() for semi-transparent background  thanks gpt for the advice totally forgot about the a*/
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
@@ -148,7 +149,7 @@ h1, h2 {
 .flex-item {
     width: 80%;           /* Set a width for the items (adjust as needed) */
     height: 100px;        /* Set a height for the items */
-    background-color: #4CAF50; /* Example background color */
+    background-color: #51e256; /* Example background color */
     color: white;         /* Text color */
     display: flex;
     justify-content: center;
