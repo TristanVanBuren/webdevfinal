@@ -143,3 +143,24 @@ h1, h2 {
     overflow: hidden;
     margin-bottom: 40px;
 }
+
+/* thanks gpt */
+.flex-item {
+    width: 80%;           /* Set a width for the items (adjust as needed) */
+    height: 100px;        /* Set a height for the items */
+    background-color: #4CAF50; /* Example background color */
+    color: white;         /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;      /* Font size for text */
+    border-radius: 5px;   /* Optional: rounded corners */
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;  /* Align children in a column */
+    justify-content: center; /* Center the items vertically */
+    align-items: center;     /* Center the items horizontally */
+    height: 100vh;           /* Make the container fill the full viewport height */
+    gap: 20px;               /* Add some space between each container */
+}
