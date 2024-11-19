@@ -10,4 +10,4 @@ windows autocommit command
 FOR /L %i IN (0,1,3) DO (timeout 600 & git add . & git commit -m "10min autosave wip" & git push -u origin main)
 
 <hr>
-getting started 11/19/24 2:32
+getting started 11/19/24 2:32 | stopped at 3:30
