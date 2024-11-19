@@ -11,7 +11,7 @@
         <nav>
             
                 <a href="index.php">Home</a>
-                <a href="#">About</a>
+                <a href= vehiclemanagemet.php> Vehicle Management </a>
                 <a href="#">Services</a>
                 <a href="#">Contact</a>
         </nav>
@@ -36,7 +36,7 @@
 
 <!--gpt alert-->
     <div class="flex-container">
-        <div class="flex-item">Container 1</div>
+        <div class="flex-item"><a href= vehiclemanagemet.php> Vehicle Management </a></div>
         <div class="flex-item">Container 2</div>
         <div class="flex-item">Container 3</div>
         <div class="flex-item">Container 4</div>
