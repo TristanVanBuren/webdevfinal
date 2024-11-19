@@ -84,9 +84,9 @@ $stmt = $pdo->query($sql);
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Tool ID</th>
-                                    <th>Tool name</th>
-                                    <th>tool type</th>
+                                    <th>Vehicle ID</th>
+                                    <th>Vehicle name</th>
+                                    <th>Vehicle type</th>
                                     <th>Hours/Milage</th>
                                     <th>Actions</th>
                                 </tr>
