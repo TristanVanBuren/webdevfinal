@@ -119,7 +119,7 @@ $stmt = $pdo->query($sql);
                             </tbody>
                         </table>
                     <?php else: ?>
-                        <p>No books found matching your search.</p>
+                        <p>No vehicles found matching your search.</p>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
