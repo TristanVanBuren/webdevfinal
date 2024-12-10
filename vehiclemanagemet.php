@@ -160,19 +160,21 @@ $stmt = $pdo->query($sql);
 
     <!-- Form section with container -->
     <div class="form-container-center">
-        <h2>add tool</h2>
-        <form action="vehiclemanagemet.php" method="post">
-            <label for="vehicle_name">Name:</label>
-            <input type="text" id="vehicle_name" name="vehicle_name" required>
-            <br><br>
-            <label for="tool_type">Tool Type:</label>
-            <input type="text" id="tool_type" name="tool_type" required>
-            <br><br>
-            <label for="hours">Hours/Milage:</label>
-            <input type="number" id="hours" name="hours" required>
-            <br><br>
-            <input type="submit" value="Damn spent more money........">
-        </form>
+        <div class= "centered-items">
+            <h2>add tool</h2>
+            <form action="vehiclemanagemet.php" method="post">
+                <label for="vehicle_name">Name:</label>
+                <input type="text" id="vehicle_name" name="vehicle_name" required>
+                <br><br>
+                <label for="tool_type">Tool Type:</label>
+                <input type="text" id="tool_type" name="tool_type" required>
+                <br><br>
+                <label for="hours">Hours/Mi: </label>
+                <input type="number" id="hours" name="hours" required>
+                <br><br>
+                <input type="submit" value="Damn spent more money........">
+            </form>
+        </div>
     </div>
 </body>
 </html>

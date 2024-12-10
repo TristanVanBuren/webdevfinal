@@ -159,6 +159,11 @@ h1, h2 {
     margin-right: auto;
 
 }
+.centered-items {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* thanks gpt */
 .flex-item {
