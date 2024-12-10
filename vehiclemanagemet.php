@@ -127,8 +127,8 @@ $stmt = $pdo->query($sql);
     </div>
 
     <!-- Table section with container -->
-    <div class="table-container">
-        <h2>All Books in Database</h2>
+    <div class="table-container-center">
+        <h2>All equipment in Database</h2>
         <table class="half-width-left-align">
             <thead>
                 <tr>

@@ -144,6 +144,13 @@ h1, h2 {
     overflow: hidden;
     margin-bottom: 40px;
 }
+.table-container-center {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 40px;
+    align-items: center;
+    margin:0 auto;
+}
 
 /* thanks gpt */
 .flex-item {
