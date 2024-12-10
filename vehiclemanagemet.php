@@ -159,7 +159,7 @@ $stmt = $pdo->query($sql);
     </div>
 
     <!-- Form section with container -->
-    <div class="form-container">
+    <div class="form-container-center" style="background-color: rgba(249, 249, 249, 0.8)";>
         <h2>add tool</h2>
         <form action="vehiclemanagemet.php" method="post">
             <label for="vehicle_name">Name:</label>

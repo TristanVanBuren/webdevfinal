@@ -106,6 +106,12 @@ h1, h2 {
 .form-container {
     margin-top: 40px;
 }
+.form-container-center {
+    margin-top: 40px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .hero-section {
     background-image: url("farm.jpg");
@@ -138,18 +144,17 @@ h1, h2 {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-/* Rest of your existing styles remain unchanged */
+
 .table-container {
     width: 100%;
     overflow: hidden;
     margin-bottom: 40px;
 }
 .table-container-center {
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 40px;
-    align-items: center;
-    margin:0 auto;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 /* thanks gpt */
