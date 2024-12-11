@@ -157,12 +157,18 @@ h1, h2 {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(249, 249, 249, 0.8);  /* Using rgba() for semi-transparent background  thanks gpt for the advice totally forgot about the a*/
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 
 }
 .centered-items {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 /* thanks gpt */
