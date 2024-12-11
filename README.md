@@ -11,4 +11,4 @@ FOR /L %i IN (0,1,3) DO (timeout 600 & git add . & git commit -m "10min autosave
 
 <hr>
 getting started 11/19/24 2:32 | stopped at 3:30
-getting started 12/10/24 6:09 | stopped at 7:09 (added big chunk of class code)|starting again 9:30
+getting started 12/10/24 6:09 | stopped at 7:09 (added big chunk of class code)|starting again 9:30 |done 10:53
