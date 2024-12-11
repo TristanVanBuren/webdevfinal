@@ -53,15 +53,7 @@ $stmt = $pdo->query($sql);
     <!-- Search moved to hero section -->
         <div class="hero-search">
            <h1> Tristan FIX THESE:</h1>
-           <?php
-                $msql = 'SELECT vehicle_name FROM `data` where running = 0 ';
-                $stamt = $pdo->query($msql);
-            ?>
-
-                <?php while ($row = $stamt->fetch()): ?>
-                   <p>fffffff<?php echo htmlspecialchars($row['vehicle_name']); ?></p>
-                    <?php endwhile; ?>
-
+           
 
 
 
