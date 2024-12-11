@@ -21,6 +21,9 @@ try {
 $sql = 'SELECT who, body FROM jod';
 $stmt = $pdo->query($sql);
 
+$sql2 = 'SELECT vehicle_name FROM `data` AND SELECT tool_name FROM tools where broken = 0 as tool';
+$stmt2 = $pdo->query($sql2);
+
 
 ?>
 <!DOCTYPE html>
