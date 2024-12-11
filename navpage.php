@@ -47,7 +47,7 @@ if (!is_logged_in()) {
 <!--gpt alert-->
     <div class="flex-container">
         <div class="flex-item"><a href= vehiclemanagemet.php> Vehicle Management </a></div>
-        <div class="flex-item">Container 2</div>
+        <div class="flex-item"><a href="usermanagement.php">user management</a></div>
         <div class="flex-item">Container 3</div>
         <div class="flex-item">Container 4</div>
     </div>
