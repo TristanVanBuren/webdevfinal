@@ -138,7 +138,7 @@ $stmt = $pdo->query($sql);
                 </tr>
             </thead>
                 <tbody>
-                <?php foreach ($search_results as $row): ?>
+                <?php while ($row = $stmt->fetch()): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($row['tool_id']); ?></td>
                     <td><?php echo htmlspecialchars($row['tool_name']); ?></td>
@@ -151,7 +151,7 @@ $stmt = $pdo->query($sql);
                         </form>
                     </td>
                     </tr>
-                <?php endforeach; ?>
+                    <?php endwhile; ?>
                     </tbody>
                     </table>
     </div>
