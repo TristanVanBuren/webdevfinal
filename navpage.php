@@ -1,3 +1,13 @@
+<?php
+session_start();
+require_once 'auth.php';
+
+// Check if user is logged in
+if (!is_logged_in()) {
+    header('Location: login.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +20,7 @@
 <header>
         <nav>
             
-                <a href="index.php">Home</a>
+                <a href="navpage.php">Home</a>
                 <a href= vehiclemanagemet.php> Vehicle Management </a>
                 <a href="#">Services</a>
                 <a href="#">Contact</a>

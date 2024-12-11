@@ -22,7 +22,7 @@ try {
 $search_results = null;
 if (isset($_GET['search']) && !empty($_GET['search'])) {
     $search_term = '%' . $_GET['search'] . '%';
-    $search_sql = 'SELECT tool_id, vehicle_name, tool_type, `hours` FROM `data` WHERE vehicle_name LIKE :search';
+    $search_sql = 'SELECT tool_id, vehicle_name, tool_type, `hours`, running FROM `data` WHERE vehicle_name LIKE :search';
     $search_stmt = $pdo->prepare($search_sql);
     $search_stmt->execute(['search' => $search_term]);
     $search_results = $search_stmt->fetchAll();
@@ -66,7 +66,7 @@ $stmt = $pdo->query($sql);
 <header>
         <nav>
             
-                <a href="index.php">Home</a>
+                <a href="navpage.php">Home</a>
                 <a href= vehiclemanagemet.php> Vehicle Management </a>
                 <a href="#">Services</a>
                 <a href="#">Contact</a>
@@ -112,7 +112,7 @@ $stmt = $pdo->query($sql);
                                     <td><?php if(($row['running']) == 1){echo "true";} else{echo "down";} ?></td>
                                     <td>
                                         <form action="vehiclemanagemet.php" method="post" style="display:inline;">
-                                            <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
+                                            <input type="hidden" name="delete_id" value="<?php echo $row['tool_id']; ?>">
                                             <input type="submit" value="GET OUT OF HERE!">
                                         </form>
                                     </td>
