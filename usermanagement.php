@@ -17,6 +17,16 @@ try {
 } catch (PDOException $e) {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['delete_id'])) {
+        // Delete an entry
+        $delete_id = (int) $_POST['delete_id'];
+        
+        $delete_sql = 'DELETE FROM users WHERE id = :id';
+        $stmt_delete = $pdo->prepare($delete_sql);
+        $stmt_delete->execute(['id' => $delete_id]);
+    }
+}
 
 $sql = 'SELECT id, username FROM users';
 $stmt = $pdo->query($sql);
@@ -40,7 +50,7 @@ $stmt = $pdo->query($sql);
             
                 <a href="navpage.php">Home</a>
                 <a href= vehiclemanagemet.php> Vehicle Management </a>
-                <a href="#">Services</a>
+                <a href="usermanagement.php">users</a>
                 <a href="#">Contact</a>
         </nav>
     </header>
@@ -57,7 +67,7 @@ $stmt = $pdo->query($sql);
         
     <!-- Search moved to hero section -->
         <div class="hero-search">
-            <h2>farming is hard and we are here to make it simple for you please make a selection below to start</h2>
+            <h2>Don't mess with this or you have to fix it</h2>
         </div>
     </div>
 
@@ -77,7 +87,7 @@ $stmt = $pdo->query($sql);
                     <td><?php echo htmlspecialchars($row['id']); ?></td>
                     <td><?php echo htmlspecialchars($row['username']); ?></td>
                     <td>
-                        <form action="vehiclemanagemet.php" method="post" style="display:inline;">
+                        <form action="usermanagement.php" method="post" style="display:inline;">
                             <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
                             <input type="submit" value="Delete user">
                         </form>
