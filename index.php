@@ -36,9 +36,6 @@ $stmt = $pdo->query($sql);
         <nav>
             
                 <a href="navpage.php">Home</a>
-                <a href= vehiclemanagemet.php> Vehicle Management </a>
-                <a href="usermanagement.php">Users</a>
-                <a href="toolmanagement.php">Tool Management</a>
                 <a href="index.php">main page</a>
         </nav>
     </header>
@@ -59,7 +56,16 @@ $stmt = $pdo->query($sql);
            <?php
                 $msql = 'SELECT vehicle_name FROM `data` where running = 0 ';
                 $stamt = $pdo->query($msql);
-           ?>
+            ?>
+
+                <?php while ($row = $stamt->fetch()): ?>
+                   <p>fffffff<?php echo htmlspecialchars($row['vehicle_name']); ?></p>
+                    <?php endwhile; ?>
+
+
+
+
+           
         </div>
     </div>
 
