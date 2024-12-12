@@ -64,7 +64,7 @@ $stmt2 = $pdo->query($sql2);
            <h1> Tristan FIX THESE:</h1>
            
            <?php while ($row = $stmt2->fetch()): ?>
-           <?php echo htmlspecialchars($row['vehicle_name']); ?>
+           <?php echo htmlspecialchars($row['vehicle_name']),", " ; ?>
            <?php endwhile; ?>
     </div>
 

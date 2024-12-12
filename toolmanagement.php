@@ -106,7 +106,7 @@ $stmt = $pdo->query($sql);
                                     <td><?php echo htmlspecialchars($row['tool_id']); ?></td>
                                     <td><?php echo htmlspecialchars($row['tool_name']); ?></td>
                                     <td><?php echo htmlspecialchars($row['tool_type']); ?></td>
-                                    <td><?php if(($row['broken']) == 1){echo "true";} else{echo "down";} ?></td>
+                                    <td><?php if(($row['broken']) == 1){echo "running";} else{echo "down";} ?></td>
                                     <td>
                                         <form action="toolmanagement.php" method="post" style="display:inline;">
                                             <input type="hidden" name="delete_id" value="<?php echo $row['tool_id']; ?>">
@@ -143,7 +143,7 @@ $stmt = $pdo->query($sql);
                     <td><?php echo htmlspecialchars($row['tool_id']); ?></td>
                     <td><?php echo htmlspecialchars($row['tool_name']); ?></td>
                     <td><?php echo htmlspecialchars($row['tool_type']); ?></td>
-                    <td><?php if(($row['broken']) == 1){echo "true";} else{echo "down";} ?></td>
+                    <td><?php if(($row['broken']) == 1){echo "running";} else{echo "down";} ?></td>
                     <td>
                         <form action="toolmanagement.php" method="post" style="display:inline;">
                         <input type="hidden" name="delete_id" value="<?php echo $row['tool_id']; ?>">
