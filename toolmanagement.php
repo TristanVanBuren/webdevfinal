@@ -48,6 +48,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt_delete = $pdo->prepare($delete_sql);
         $stmt_delete->execute(['id' => $delete_id]);
     }
+    elseif (isset($_POST['update_id'])) {
+        // Delete an entry
+        $update_id = (int) $_POST['update_id'];
+        
+        $update_sql = 'UPDATE tools SET broken = 0 WHERE update_id = :id';
+        $stmt_delete = $pdo->prepare($update_sql);
+        $stmt_delete->execute(['id' => $update_id]);
+    }
 }
 
 
@@ -112,6 +120,10 @@ $stmt = $pdo->query($sql);
                                             <input type="hidden" name="delete_id" value="<?php echo $row['tool_id']; ?>">
                                             <input type="submit" value="GET OUT OF HERE!">
                                         </form>
+                                        <form action="toolmanagement.php" method="post" style="display:inline;">
+                                            <input type="hidden" name="update_id" value="<?php echo $row['tool_id']; ?>">
+                                            <input type="submit" value="oops now broke">
+                                        </form>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
@@ -148,6 +160,10 @@ $stmt = $pdo->query($sql);
                         <form action="toolmanagement.php" method="post" style="display:inline;">
                         <input type="hidden" name="delete_id" value="<?php echo $row['tool_id']; ?>">
                         <input type="submit" value="GET OUT OF HERE!">
+                        </form>
+                        <form action="toolmanagement.php" method="post" style="display:inline;">
+                            <input type="hidden" name="update_id" value="<?php echo $row['tool_id']; ?>">
+                            <input type="submit" value="oops now broke">
                         </form>
                     </td>
                     </tr>
