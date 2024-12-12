@@ -73,7 +73,9 @@ $stmt2 = $pdo->query($sql2);
            <h1> general annoucements</h1>
            
            <?php while ($row = $stmt->fetch()): ?>
-           <?php echo htmlspecialchars($row['body']); ?>
+           <hr>
+           <?php echo nl2br(htmlspecialchars($row['body']));?>
+           <br><br>
            <?php endwhile; ?>
     </div>
 
