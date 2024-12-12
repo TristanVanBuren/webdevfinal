@@ -54,7 +54,7 @@ $stmt = $pdo->query($sql);
     <title>Farm Management</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="red">
 
 <header>
         <nav>
@@ -73,7 +73,7 @@ $stmt = $pdo->query($sql);
 
 
     <!-- Hero Section -->
-    <div class="hero-section">
+    <div class="hero-section-case">
         <h1 class="hero-title">High top Mountain farm management sowftware</h1>
         <p class="hero-subtitle">" why paper when we can have it centralized online! "</p>
     
@@ -112,7 +112,7 @@ $stmt = $pdo->query($sql);
     </div>
     <div class="form-container-center">
         <div class= "centered-items">
-            <h2>add message</h2>
+            <h2>Add message</h2>
             <form action="jodmanagement.php" method="post">
                 <label for="who">Name:</label>
                 <input type="text" id="who" name="who" required>
