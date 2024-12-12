@@ -18,25 +18,28 @@ try {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['delete_id'])) {
-        // Delete an entry
-        $delete_id = (int) $_POST['delete_id'];
-        
-        $delete_sql = 'DELETE FROM jod WHERE id = :id';
-        $stmt_delete = $pdo->prepare($delete_sql);
-        $stmt_delete->execute(['id' => $delete_id]);
-    }
-        else if (isset($_POST['who']) && isset($_POST['body']) ) {
+    
+        if (isset($_POST['who']) && isset($_POST['body']) ) {
             // Insert new entry
             $who = htmlspecialchars($_POST['who']);
             $body = htmlspecialchars($_POST['body']);
-            
-            
-}
+
+            $insert_sql = 'INSERT INTO jod (who, body) VALUES (:who, :body)';
+            $stmt_insert = $pdo->prepare($insert_sql);
+            $stmt_insert->execute(['who' => $who, 'body' => $body]);
+            }
+            else if (isset($_POST['delete_id'])) {
+                // Delete an entry
+                $delete_id = (int) $_POST['delete_id'];
+                
+                $delete_sql = 'DELETE FROM jod WHERE id = :id';
+                $stmt_delete = $pdo->prepare($delete_sql);
+                $stmt_delete->execute(['id' => $delete_id]);
+            }
 }
 
 
-$sql = 'SELECT who, body FROM jod';
+$sql = 'SELECT id, who, body FROM jod';
 $stmt = $pdo->query($sql);
 
 
@@ -110,10 +113,10 @@ $stmt = $pdo->query($sql);
             <h2>add tool</h2>
             <form action="jodmanagement.php" method="post">
                 <label for="who">Name:</label>
-                <input type="text" id="who" name="who_name" required>
+                <input type="text" id="who" name="who" required>
                 <br><br>
                 <label for="body">message:</label>
-                <input type="text" id="body" name="body_type" required>
+                <input type="text" id="body" name="body" required>
                 <br><br>
                 <input type="submit" value="add message">
             </form>
