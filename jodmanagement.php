@@ -26,6 +26,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt_delete = $pdo->prepare($delete_sql);
         $stmt_delete->execute(['id' => $delete_id]);
     }
+    else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if (isset($_POST['who']) && isset($_POST['body']) ) {
+            // Insert new entry
+            $who = htmlspecialchars($_POST['who']);
+            $body = htmlspecialchars($_POST['body']);
+            $id = null;
+            
+            $insert_sql = 'INSERT INTO jod (id, who, body) VALUES (:id, :who, :body)';
+            $stmt_insert = $pdo->prepare($insert_sql);
+            $stmt_insert->execute(['id' => $id, 'who' => $who, 'body' => $body]);
+}
+}
 }
 
 $sql = 'SELECT who, body FROM jod';
@@ -96,5 +108,19 @@ $stmt = $pdo->query($sql);
                 <?php endwhile; ?>
             </tbody>
         </table>
+    </div>
+    <div class="form-container-center">
+        <div class= "centered-items">
+            <h2>add tool</h2>
+            <form action="jodmanagement.php" method="post">
+                <label for="who">Name:</label>
+                <input type="text" id="who" name="vehicle_name" required>
+                <br><br>
+                <label for="body">message:</label>
+                <input type="text" id="body" name="tool_type" required>
+                <br><br>
+                <input type="submit" value="add message">
+            </form>
+        </div>
     </div>
 </body>
