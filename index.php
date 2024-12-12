@@ -38,8 +38,8 @@ $stmt2 = $pdo->query($sql2);
 <header>
         <nav>
             
-                <a href="navpage.php">Home</a>
-                <a href="index.php">main page</a>
+                <a href="navpage.php">admin</a>
+                <a href="index.php">Home</a>
         </nav>
     </header>
 
@@ -55,7 +55,7 @@ $stmt2 = $pdo->query($sql2);
         
     <!-- Search moved to hero section -->
         <div class="hero-search">
-           <h1> Tristan FIX THESE:</h1>
+           <h1> below you will find the jobs of the day</h1>
            
            
         </div>
@@ -65,6 +65,15 @@ $stmt2 = $pdo->query($sql2);
            
            <?php while ($row = $stmt2->fetch()): ?>
            <?php echo htmlspecialchars($row['vehicle_name']); ?>
+           <?php endwhile; ?>
+    </div>
+
+    <br>
+    <div class="hero-search">
+           <h1> general annoucements</h1>
+           
+           <?php while ($row = $stmt->fetch()): ?>
+           <?php echo htmlspecialchars($row['body']); ?>
            <?php endwhile; ?>
     </div>
 
