@@ -49,6 +49,7 @@ if (!is_logged_in()) {
         <div class="flex-item"><a href= vehiclemanagemet.php> Vehicle Management </a></div>
         <div class="flex-item"><a href="usermanagement.php">user management</a></div>
         <div class="flex-item"><a href="toolmanagement.php">Tool Management </a></div>
+        <div class="flex-item"><a href="jodmanagement.php">Job of the Day Management </a></div>
         <div class="flex-item"><a href="index.php"> main page</a></div>
     </div>
     
