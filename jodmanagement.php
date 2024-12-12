@@ -54,7 +54,7 @@ $stmt = $pdo->query($sql);
     <title>Farm Management</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="red">
+<body>
 
 <header>
         <nav>
@@ -73,7 +73,7 @@ $stmt = $pdo->query($sql);
 
 
     <!-- Hero Section -->
-    <div class="hero-section-case">
+    <div class="hero-section">
         <h1 class="hero-title">High top Mountain farm management sowftware</h1>
         <p class="hero-subtitle">" why paper when we can have it centralized online! "</p>
     
