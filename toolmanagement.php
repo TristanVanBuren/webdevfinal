@@ -52,9 +52,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Delete an entry
         $update_id = (int) $_POST['update_id'];
         
-        $update_sql = 'UPDATE tools SET broken = 0 WHERE update_id = :id';
+        $update_sql = 'UPDATE tools SET broken = 0 WHERE tool_id = :id';
         $stmt_delete = $pdo->prepare($update_sql);
         $stmt_delete->execute(['id' => $update_id]);
+    }
+    elseif (isset($_POST['fixed_id'])) {
+        // Delete an entry
+        $fixed_id = (int) $_POST['fixed_id'];
+        
+        $fixed_sql = 'UPDATE tools SET broken = 1 WHERE tool_id = :id';
+        $stmt_delete = $pdo->prepare($fixed_sql);
+        $stmt_delete->execute(['id' => $fixed_id]);
     }
 }
 
@@ -124,6 +132,10 @@ $stmt = $pdo->query($sql);
                                             <input type="hidden" name="update_id" value="<?php echo $row['tool_id']; ?>">
                                             <input type="submit" value="oops now broke">
                                         </form>
+                                        <form action="toolmanagement.php" method="post" style="display:inline;">
+                                            <input type="hidden" name="fixed_id" value="<?php echo $row['tool_id']; ?>">
+                                            <input type="submit" value="fixed">
+                                        </form>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
@@ -164,6 +176,10 @@ $stmt = $pdo->query($sql);
                         <form action="toolmanagement.php" method="post" style="display:inline;">
                             <input type="hidden" name="update_id" value="<?php echo $row['tool_id']; ?>">
                             <input type="submit" value="oops now broke">
+                        </form>
+                        <form action="toolmanagement.php" method="post" style="display:inline;">
+                             <input type="hidden" name="fixed_id" value="<?php echo $row['tool_id']; ?>">
+                             <input type="submit" value="fixed">
                         </form>
                     </td>
                     </tr>
