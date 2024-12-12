@@ -59,10 +59,12 @@ $stmt = $pdo->query($sql);
 <header>
         <nav>
             
-                <a href="navpage.php">Home</a>
-                <a href= vehiclemanagemet.php> Vehicle Management </a>
-                <a href="usermanagement.php">users</a>
-                <a href="#">Contact</a>
+                <a href="navpage.php">Dashboard</a>
+                <a href= vehiclemanagemet.php> Vehicle  </a>
+                <a href="usermanagement.php">Users</a>
+                <a href="toolmanagement.php">Tools</a>
+                <a href="jodmanagement.php">JOD</a>
+                <a href="index.php">Home</a>
         </nav>
     </header>
 
@@ -110,7 +112,7 @@ $stmt = $pdo->query($sql);
     </div>
     <div class="form-container-center">
         <div class= "centered-items">
-            <h2>add tool</h2>
+            <h2>add message</h2>
             <form action="jodmanagement.php" method="post">
                 <label for="who">Name:</label>
                 <input type="text" id="who" name="who" required>

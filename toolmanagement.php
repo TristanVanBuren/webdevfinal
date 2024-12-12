@@ -82,10 +82,12 @@ $stmt = $pdo->query($sql);
 <header>
         <nav>
             
-                <a href="navpage.php">Home</a>
-                <a href= vehiclemanagemet.php> tool Management </a>
+                <a href="navpage.php">Dashboard</a>
+                <a href= vehiclemanagemet.php> Vehicle  </a>
                 <a href="usermanagement.php">Users</a>
-                <a href="toolmanagement.php">tools</a>
+                <a href="toolmanagement.php">Tools</a>
+                <a href="jodmanagement.php">JOD</a>
+                <a href="index.php">Home</a>
         </nav>
     </header>
 

@@ -38,8 +38,7 @@ $stmt2 = $pdo->query($sql2);
 <header>
         <nav>
             
-                <a href="navpage.php">admin</a>
-                <a href="index.php">Home</a>
+                <a href="navpage.php">Admin dashboard</a>
         </nav>
     </header>
 

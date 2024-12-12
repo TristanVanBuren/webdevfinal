@@ -20,10 +20,12 @@ if (!is_logged_in()) {
 <header>
         <nav>
             
-                <a href="navpage.php">Home</a>
-                <a href= vehiclemanagemet.php> Vehicle Management </a>
-                <a href="usermanagement.php">users</a>
-                <a href="#">Contact</a>
+                <a href="navpage.php">Dashboard</a>
+                <a href= vehiclemanagemet.php> Vehicle  </a>
+                <a href="usermanagement.php">Users</a>
+                <a href="toolmanagement.php">Tools</a>
+                <a href="jodmanagement.php">JOD</a>
+                <a href="index.php">Home</a>
         </nav>
     </header>
 
